@@ -58,7 +58,8 @@ public class POM extends BaseClass{
 		placeorder.orderplacing();
 		String text= placeorder.Confirmationmessage();
 		Assert.assertTrue(text.equalsIgnoreCase("Thankyou for the order."));
-	}
+		System.out.println("Checking Git");
+		}
 	@Test(dependsOnMethods="OrderPlacement", dataProvider="data")
 	public void OrderPage(HashMap<String, String> hashmap) throws InterruptedException {
 		AddToCart cart = landing.login(hashmap.get("email"), hashmap.get("password"));

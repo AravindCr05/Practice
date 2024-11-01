@@ -27,7 +27,7 @@ public class ErrorValidation extends BaseClass{
 	@Test(groups= {"ErrorValidation"},retryAnalyzer=RetryAnalyzer.class)
 	 public void LoginError() throws IOException, InterruptedException{
 		landing.login("ramesharavind96@gmail.com", "Test123");
-		Assert.assertEquals(landing.ErrorMessage(), "Incorrect email  password.");
+		Assert.assertEquals(landing.ErrorMessage(), "Incorrect email or password.");
 	}
 	@Test
 	public void ProductError() {
